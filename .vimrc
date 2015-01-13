@@ -50,6 +50,7 @@ NeoBundle 'kana/vim-arpeggio'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'plasticboy/vim-markdown'
 
 "GitHub以外のGitリポジトリにあるプラグインを利用する
 NeoBundle 'git://git.wincent.com/command-t.git'
