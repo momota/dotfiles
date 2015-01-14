@@ -44,13 +44,20 @@ NeoBundle 'Shougo/neomru.vim'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'davidoc/taskpaper.vim'
 NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'nathanaelkane/vim-indent-guides'
 NeoBundle 'kana/vim-arpeggio'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'rking/ag.vim'
+
+" syntax highlight
 NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'vim-ruby/vim-ruby'
+
+" colorscheme
+NeoBundle 'flazz/vim-colorschemes'
+NeoBundle 'altercation/vim-colors-solarized'
+NeoBundle 'tomasr/molokai'
 
 "GitHub以外のGitリポジトリにあるプラグインを利用する
 NeoBundle 'git://git.wincent.com/command-t.git'
