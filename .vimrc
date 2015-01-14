@@ -1,6 +1,6 @@
-" ----------------------------------------------------------------------
+" ======================================================================
 " NeoBundle
-" ----------------------------------------------------------------------
+" ======================================================================
 if has('vim_starting')
   if &compatible
     set nocompatible               " Be iMproved
@@ -17,7 +17,6 @@ call neobundle#begin(expand('/home/momota/.vim/bundle'))
 " Required:
 NeoBundleFetch 'Shougo/neobundle.vim'
 
-
 " You can specify revision/branch/tag.
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
@@ -33,9 +32,7 @@ NeoBundleCheck
 
 " ----------------------------------------------------------------------
 " install plugins
-" Add or remove your Bundles here:
 " GitHubリポジトリにあるプラグインを利用する
-" --> NeoBundle 'USER/REPOSITORY-NAME'
 NeoBundle 'Shougo/neosnippet.vim'
 NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neocomplcache'
@@ -73,6 +70,7 @@ NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 
 " ----------------------------------------------------------------------
 " neocomplcache 
+
 let g:neocomplcache_enable_at_startup = 1 " 起動時に有効化
 
 
@@ -129,6 +127,7 @@ endfunction"}}}
 
 " ----------------------------------------------------------------------
 " lightline.vim
+
 set laststatus=2
 set t_Co=256
 let g:lightline = {
@@ -231,13 +230,13 @@ let g:indent_guides_start_level=2
 " 自動カラーを無効にする
 let g:indent_guides_auto_colors=0
 " 奇数インデントのカラー
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  guibg=#d6d6d6 ctermbg=gray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
 " 偶数インデントのカラー
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven guibg=#ececec ctermbg=darkgray
+autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 " ハイライト色の変化の幅
-let g:indent_guides_color_change_percent = 30
+"let g:indent_guides_color_change_percent = 30
 " ガイドの幅
-"let g:indent_guides_guide_size = 1
+let g:indent_guides_guide_size = 1
 
 
 " ----------------------------------------------------------------------
@@ -257,7 +256,6 @@ Arpeggiovmap fj <Esc>
 " solarized
 
 call togglebg#map("<F5>")
-"set t_Co=16
 "let g:solarized_termcolors=16
 "let g:solarized_termtrans=0
 "let g:solarized_degrade=0
@@ -272,7 +270,7 @@ colorscheme solarized
 
 
 " ======================================================================
-" etc
+" conf
 " ======================================================================
 
 " 行番号表示
@@ -318,4 +316,7 @@ set hlsearch
 
 " 垂直分割でヘルプを表示する [<Space> + h <help-file>]
 nnoremap <Space>h :<C-u>vert bel h<Space>
+
+" Yを行末までヤンクにするマッピング
+nnoremap Y y$
 
