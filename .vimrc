@@ -283,7 +283,6 @@ set showmatch
 " カーソル行をハイライトする
 set cursorline
 set cursorcolumn
-
 highlight CursorLine   cterm=NONE ctermbg=Black
 highlight CursorColumn            ctermbg=Black
 
@@ -295,29 +294,52 @@ if has('multi_byte_ime')
 endif
 
 
-" インデント
-set autoindent
-set smartindent
-filetype plugin indent on
-
 " 全角スペースを視覚化
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
 
-" tab
-set expandtab
-set ts=2
-
-"カーソルを行頭、行末で止まらないようにする
-set whichwrap=b,s,h,l,<,>,[,]
-
-" 検索結果をハイライトする
-set hlsearch
-
-
 " 垂直分割でヘルプを表示する [<Space> + h <help-file>]
 nnoremap <Space>h :<C-u>vert bel h<Space>
+
+" コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
+set wildmenu
+
 
 " Yを行末までヤンクにするマッピング
 nnoremap Y y$
 
+
+" ----------------------------------------------------------------------------------------
+"   編集に関する設定
+" tab
+set tabstop=2
+set shiftwidth=2
+set expandtab
+
+"カーソルを行頭、行末で止まらないようにする
+set whichwrap=b,s,h,l,<,>,[,]
+
+" インデント
+set autoindent
+set smartindent
+
+" バックスペースでインデントや改行を削除できるようにする
+set backspace=indent,eol,start
+" 自動折り返しをoff
+set textwidth=0
+
+" テキスト挿入中の自動折り返しを日本語に対応させる
+set formatoptions+=mM
+
+
+" ----------------------------------------------------------------------
+"   検索の挙動に関する設定
+" 検索結果をハイライトする
+set hlsearch
+" 検索時にファイルの最後まで行ったら最初に戻る (nowrapscan:戻らない)
+set wrapscan
+
+" 検索時に大文字小文字を無視 (noignorecase:無視しない)
+set ignorecase
+" " 大文字小文字の両方が含まれている場合は大文字小文字を区別
+set smartcase
