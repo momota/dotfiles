@@ -21,3 +21,6 @@ samples
 .vim/bundle/
 .vim/.netrwhist
 .vimrc_sample
+
+.bundle/
+vendor/bundle/
