@@ -7,11 +7,11 @@ if has('vim_starting')
   endif
 
   " Required:
-  set runtimepath+=/home/momota/.vim/bundle/neobundle.vim/
+  set runtimepath+=~/.vim/bundle/neobundle.vim/
 endif
 
 " Required:
-call neobundle#begin(expand('/home/momota/.vim/bundle'))
+call neobundle#begin(expand('~/.vim/bundle'))
 
 " Let NeoBundle manage NeoBundle
 " Required:
@@ -273,6 +273,9 @@ colorscheme solarized
 " ======================================================================
 " conf
 " ======================================================================
+" syntax highlight
+syntax on
+
 
 " 行番号表示
 set number
