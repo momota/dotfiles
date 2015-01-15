@@ -46,6 +46,7 @@ NeoBundle 'kana/vim-arpeggio'
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
+NeoBundle 'h1mesuke/vim-alignta'
 
 " syntax highlight
 NeoBundle 'plasticboy/vim-markdown'
