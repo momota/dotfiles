@@ -129,7 +129,6 @@ endfunction"}}}
 " ----------------------------------------------------------------------
 " lightline.vim
 
-set laststatus=2
 set t_Co=256
 let g:lightline = {
         \ 'colorscheme': 'wombat',
@@ -273,15 +272,30 @@ colorscheme solarized
 " ======================================================================
 " conf
 " ======================================================================
+
+" ----------------------------------------------------------------------
+"   表示に関する設定
 " syntax highlight
 syntax on
 
-
 " 行番号表示
 set number
-
+" ルーラーを表示 (noruler:非表示)
+set ruler
+" タブや改行を表示 (list:表示)
+set nolist
 " 閉じカッコが入力されたとき、対応するカッコを表示
 set showmatch
+" 長い行を折り返して表示 (nowrap:折り返さない)
+set wrap
+" 常にステータス行を表示 (詳細は:he laststatus)
+set laststatus=2
+" コマンドラインの高さ (Windows用gvim使用時はgvimrcを編集すること)
+set cmdheight=2
+" コマンドをステータス行に表示
+set showcmd
+" タイトルを表示
+set title
 
 " カーソル行をハイライトする
 set cursorline
@@ -301,18 +315,9 @@ endif
 highlight ZenkakuSpace cterm=underline ctermfg=lightblue guibg=white
 match ZenkakuSpace /　/
 
-" 垂直分割でヘルプを表示する [<Space> + h <help-file>]
-nnoremap <Space>h :<C-u>vert bel h<Space>
-
-" コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
-set wildmenu
 
 
-" Yを行末までヤンクにするマッピング
-nnoremap Y y$
-
-
-" ----------------------------------------------------------------------------------------
+" ----------------------------------------------------------------------
 "   編集に関する設定
 " tab
 set tabstop=2
@@ -346,3 +351,19 @@ set wrapscan
 set ignorecase
 " " 大文字小文字の両方が含まれている場合は大文字小文字を区別
 set smartcase
+
+
+" ----------------------------------------------------------------------
+"   検索の挙動に関する設定
+
+" 垂直分割でヘルプを表示する [<Space> + h <help-file>]
+nnoremap <Space>h :<C-u>vert bel h<Space>
+
+" コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
+set wildmenu
+
+" Yを行末までヤンクにするマッピング
+nnoremap Y y$
+
+" コマンド履歴数
+set history=1000
