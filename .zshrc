@@ -103,3 +103,10 @@ man() {
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+
+# aliases
+if [ `which vim` ]; then
+  alias vi='vim'
+  alias view='vim -R'
+fi
