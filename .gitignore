@@ -24,3 +24,5 @@ samples
 
 .bundle/
 vendor/bundle/
+
+public/
