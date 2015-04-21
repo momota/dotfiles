@@ -269,6 +269,12 @@ set background=dark
 colorscheme solarized
 
 
+" ----------------------------------------------------------------------
+" syntax file
+augroup filetype
+  au! BufRead,BufNewFile *.slim        set filetype=slim
+augroup END 
+
 
 " ======================================================================
 " conf
