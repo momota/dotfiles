@@ -1,0 +1,9 @@
+[http]
+[https]
+[url "https://"]
+	insteadOf = git://
+[user]
+	name = momota
+	email = makoto.momota@gmail.com
+[color]
+	ui = auto
