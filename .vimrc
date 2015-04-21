@@ -51,6 +51,7 @@ NeoBundle 'h1mesuke/vim-alignta'
 " syntax highlight
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'vim-ruby/vim-ruby'
+NeoBundle 'slim-template/vim-slim'
 
 " colorscheme
 NeoBundle 'flazz/vim-colorschemes'
