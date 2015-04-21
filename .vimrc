@@ -52,6 +52,7 @@ NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'slim-template/vim-slim'
+NeoBundle 'kchmck/vim-coffee-script'
 
 " colorscheme
 NeoBundle 'flazz/vim-colorschemes'
@@ -271,8 +272,10 @@ colorscheme solarized
 
 " ----------------------------------------------------------------------
 " syntax file
+
 augroup filetype
-  au! BufRead,BufNewFile *.slim        set filetype=slim
+  au! BufRead,BufNewFile *.slim   set filetype=slim
+  au! BufRead,BufNewFile *.coffee set filetype=coffee
 augroup END 
 
 
