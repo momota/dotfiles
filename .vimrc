@@ -21,9 +21,6 @@ NeoBundleFetch 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
 
 " Required:
-call neobundle#end()
-
-" Required:
 filetype plugin indent on
 
 " If there are uninstalled bundles found on startup,
@@ -47,7 +44,11 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'h1mesuke/vim-alignta'
+
+" incsearch
 NeoBundle 'haya14busa/incsearch.vim'
+NeoBundle 'haya14busa/incsearch-fuzzy.vim'
+NeoBundle 'haya14busa/incsearch-migemo.vim'
 
 " syntax highlight
 NeoBundle 'plasticboy/vim-markdown'
@@ -70,6 +71,9 @@ NeoBundle 'surround.vim'
 NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
 NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 
+
+" Required:
+call neobundle#end()
 
 
 " ----------------------------------------------------------------------
@@ -269,6 +273,29 @@ call togglebg#map("<F5>")
 "let g:solarized_visibility="normal"
 set background=dark
 colorscheme solarized
+
+
+" ----------------------------------------------------------------------
+" incsearch.vim
+
+map /  <Plug>(incsearch-forward)
+map ?  <Plug>(incsearch-backward)
+map g/ <Plug>(incsearch-stay)
+
+" fuzzy search
+"map z/ <Plug>(incsearch-fuzzy-/)
+"map z? <Plug>(incsearch-fuzzy-?)
+"map zg/ <Plug>(incsearch-fuzzy-stay)
+
+" fuzzy spell search
+map z/ <Plug>(incsearch-fuzzyspell-/)
+map z? <Plug>(incsearch-fuzzyspell-?)
+map zg/ <Plug>(incsearch-fuzzyspell-stay)
+
+" migemo search
+map m/ <Plug>(incsearch-migemo-/)
+map m? <Plug>(incsearch-migemo-?)
+map mg/ <Plug>(incsearch-migemo-stay)
 
 
 " ----------------------------------------------------------------------
