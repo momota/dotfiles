@@ -62,13 +62,13 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 
 "GitHub以外のGitリポジトリにあるプラグインを利用する
-NeoBundle 'git://git.wincent.com/command-t.git'
+"NeoBundle 'git://git.wincent.com/command-t.git'
 
 " vim-scripts リポジトリにあるプラグインを利用する
 NeoBundle 'surround.vim'
 
 "Git以外のリポジトリにあるプラグインを利用する
-NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
+NeoBundle 'https://svn.macports.org/repository/macports/contrib/mpvim/'
 NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 
 
@@ -272,7 +272,7 @@ call togglebg#map("<F5>")
 "let g:solarized_contrast="normal"
 "let g:solarized_visibility="normal"
 set background=dark
-colorscheme solarized
+"colorscheme solarized
 
 
 " ----------------------------------------------------------------------
@@ -405,3 +405,6 @@ nnoremap Y y$
 
 " コマンド履歴数
 set history=1000
+
+colorscheme molokai
+
