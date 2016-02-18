@@ -55,6 +55,8 @@ NeoBundle 'plasticboy/vim-markdown'
 NeoBundle 'vim-ruby/vim-ruby'
 NeoBundle 'slim-template/vim-slim'
 NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'kchmck/vim-coffee-script'
+NeoBundle 'fatih/vim-go'
 
 " colorscheme
 NeoBundle 'flazz/vim-colorschemes'
@@ -62,14 +64,14 @@ NeoBundle 'altercation/vim-colors-solarized'
 NeoBundle 'tomasr/molokai'
 
 "GitHub以外のGitリポジトリにあるプラグインを利用する
-NeoBundle 'git://git.wincent.com/command-t.git'
+"NeoBundle 'git://git.wincent.com/command-t.git'
 
 " vim-scripts リポジトリにあるプラグインを利用する
 NeoBundle 'surround.vim'
 
 "Git以外のリポジトリにあるプラグインを利用する
-NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
-NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
+"NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
+"NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
 
 
 " Required:
