@@ -398,6 +398,9 @@ set smartcase
 " 垂直分割でヘルプを表示する [<Space> + h <help-file>]
 nnoremap <Space>h :<C-u>vert bel h<Space>
 
+" 垂直分割でdiff [<Space> + vd <diff-file>]
+nnoremap <Space>vd :<C-u>vertical diffsplit<Space>
+
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
 
