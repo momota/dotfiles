@@ -44,6 +44,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'itchyny/vim-cursorword'
 
 " incsearch
 NeoBundle 'haya14busa/incsearch.vim'
