@@ -46,6 +46,9 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'h1mesuke/vim-alignta'
 
+" lint
+NeoBundle 'scrooloose/syntastic'
+
 " incsearch
 NeoBundle 'haya14busa/incsearch.vim'
 NeoBundle 'haya14busa/incsearch-fuzzy.vim'
@@ -369,6 +372,16 @@ map zg/ <Plug>(incsearch-fuzzyspell-stay)
 map m/ <Plug>(incsearch-migemo-/)
 map m? <Plug>(incsearch-migemo-?)
 map mg/ <Plug>(incsearch-migemo-stay)
+
+
+" ----------------------------------------------------------------------
+" syntastic: for lint (rubocop)
+
+let g:syntastic_mode_map = { 'mode': 'active' }
+let g:syntastic_ruby_checkers = ['rubocop']
+let g:syntastic_memo_checkers = ['textlint']
+let g:syntastic_mail_checkers = ['textlint']
+let g:syntastic_markdown_checkers = ['textlint']
 
 
 " ----------------------------------------------------------------------
