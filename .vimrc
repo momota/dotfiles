@@ -310,12 +310,12 @@ set pumheight=10
 let g:indent_guides_enable_on_vim_startup=1
 " ガイドをスタートするインデントの量
 let g:indent_guides_start_level=2
-" 自動カラーを無効にする
-let g:indent_guides_auto_colors=0
+" 自動カラーを有効にする
+let g:indent_guides_auto_colors=1
 " 奇数インデントのカラー
-autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=white
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesOdd  ctermbg=black
 " 偶数インデントのカラー
-autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
+"autocmd VimEnter,Colorscheme * :hi IndentGuidesEven ctermbg=darkgrey
 " ハイライト色の変化の幅
 "let g:indent_guides_color_change_percent = 30
 " ガイドの幅
@@ -343,12 +343,12 @@ call togglebg#map("<F5>")
 "let g:solarized_termtrans=0
 "let g:solarized_degrade=0
 "let g:solarized_bold=1
-"let g:solarized_underline=1
-"let g:solarized_italic=1
+let g:solarized_underline=1
+let g:solarized_italic=0
 "let g:solarized_contrast="normal"
 "let g:solarized_visibility="normal"
 set background=dark
-"colorscheme solarized
+colorscheme solarized
 
 
 " ----------------------------------------------------------------------
@@ -494,6 +494,4 @@ nnoremap Y y$
 
 " コマンド履歴数
 set history=1000
-
-colorscheme molokai
 
