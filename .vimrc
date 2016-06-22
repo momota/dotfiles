@@ -61,6 +61,7 @@ NeoBundle 'slim-template/vim-slim'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'fatih/vim-go'
+NeoBundle 'momota/junos.vim'
 
 " colorscheme
 NeoBundle 'flazz/vim-colorschemes'
