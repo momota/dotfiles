@@ -18,6 +18,9 @@ source ~/.vimperator/vimppm/plugin/vimppm.js
 vimppm '_smooziee.js'
 vimppm 'copy.js'
 vimppm 'caret-hint.js'
+vimppm 'migemo-find.js'
+vimppm 'migemo_completion.js'
+vimppm 'migemo_hint.js'
 
 
 " ----------------------------------------------------------------------
