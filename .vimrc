@@ -465,6 +465,8 @@ set textwidth=0
 " テキスト挿入中の自動折り返しを日本語に対応させる
 set formatoptions+=mM
 
+" mac: yank のクリップボード連携
+set clipboard=unnamed,autoselect
 
 " ----------------------------------------------------------------------
 "   検索の挙動に関する設定
