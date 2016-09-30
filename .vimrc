@@ -45,6 +45,7 @@ NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'itchyny/calendar.vim'
 
 " lint
 NeoBundle 'scrooloose/syntastic'
@@ -392,10 +393,16 @@ let g:syntastic_markdown_checkers = ['textlint']
 
 " ----------------------------------------------------------------------
 " open browser
+
 let g:netrw_nogx = 1 " disable netrw's gx mapping.
 nmap gx <Plug>(openbrowser-smart-search)
 vmap gx <Plug>(openbrowser-smart-search)
 
+" ----------------------------------------------------------------------
+" calendar
+
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
 
 " ----------------------------------------------------------------------
 " syntax file
