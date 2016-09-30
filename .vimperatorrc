@@ -9,7 +9,7 @@
 " ----------------------------------------------------------------------
 
 " git clone https://github.com/cd01/vimppm ~/.vimperator/vimppm
-source ~/.vimperator/vimppm/plugin/vimppm.js
+source ~/.vimperator/vimppm/plugin/vimppm/vimppm.js
 
 " Github にあるプラグイン
 "vimppm 'cd01/evernote-clearly-vimp'
@@ -87,6 +87,8 @@ set hlsearch
 " commandモードでIMEオフ
 style! -name=commandline-ime chrome://* #liberator-commandline-command input {ime-mode: inactive;}
 
+" Firefox 49 以降でsmart completion が効かない対処
+js services.services.autoCompleteSearch.class_="@mozilla.org/autocomplete/search;1?name=unifiedcomplete"
 
 " ----------------------------------------------------------------------
 "  hatenabookmark
@@ -95,6 +97,8 @@ style! -name=commandline-ime chrome://* #liberator-commandline-command input {im
 javascript if (typeof hBookmark != 'undefined') liberator.loadScript('chrome://hatenabookmark/content/vimperator/plugin/hatenabookmark.js', {__proto__: this});
 nnoremap s :hbt<Space>
 nnoremap S :hbtc<Space>
+
+" open コマンドや tabopen コマンドのURL補完に、ブックマークの検索結果を追加する
 set complete+=H
 
 javascript <<EOF
@@ -134,3 +138,10 @@ liberator.globalVariables.hBookmark_search_limit = 10;
 liberator.globalVariables.hBookmark_search_max_limit = 100;
 
 EOF
+
+
+" ----------------------------------------------------------------------
+" feedSomeKeys
+" ----------------------------------------------------------------------
+command! -nargs=+ lazy autocmd VimperatorEnter .* <args>
+lazy fmaps -u='feedly\.com' j k n p o v gm ga gg gl / r m x s t l f b
