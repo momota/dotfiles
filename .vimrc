@@ -64,6 +64,10 @@ NeoBundle 'fatih/vim-go'
 NeoBundle 'momota/junos.vim'
 NeoBundle 'momota/cisco.vim'
 
+" for editting markdown file
+NeoBundle 'tyru/open-browser.vim'
+NeoBundle 'kannokanno/previm'
+
 " colorscheme
 NeoBundle 'flazz/vim-colorschemes'
 NeoBundle 'altercation/vim-colors-solarized'
@@ -384,6 +388,13 @@ let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_memo_checkers = ['textlint']
 let g:syntastic_mail_checkers = ['textlint']
 let g:syntastic_markdown_checkers = ['textlint']
+
+
+" ----------------------------------------------------------------------
+" open browser
+let g:netrw_nogx = 1 " disable netrw's gx mapping.
+nmap gx <Plug>(openbrowser-smart-search)
+vmap gx <Plug>(openbrowser-smart-search)
 
 
 " ----------------------------------------------------------------------
