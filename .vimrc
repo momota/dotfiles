@@ -65,6 +65,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'momota/junos.vim'
 NeoBundle 'momota/cisco.vim'
+NeoBundle 'pearofducks/ansible-vim'
 
 " for editting markdown file
 NeoBundle 'tyru/open-browser.vim'
