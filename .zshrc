@@ -110,3 +110,9 @@ if [ `which vim` ]; then
   alias vi='vim'
   alias view='vim -R'
 fi
+
+#
+# less
+#
+export LESS='-i -M -R -S -z-4 -x2'
+
