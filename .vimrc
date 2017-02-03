@@ -47,6 +47,7 @@ NeoBundle 'ctrlpvim/ctrlp.vim'
 NeoBundle 'rking/ag.vim'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'itchyny/calendar.vim'
+NeoBundle 'ujihisa/neco-look'
 
 " lint
 NeoBundle 'scrooloose/syntastic'
@@ -65,6 +66,7 @@ NeoBundle 'kchmck/vim-coffee-script'
 NeoBundle 'fatih/vim-go'
 NeoBundle 'momota/junos.vim'
 NeoBundle 'momota/cisco.vim'
+NeoBundle 'pearofducks/ansible-vim'
 
 " for editting markdown file
 NeoBundle 'tyru/open-browser.vim'
@@ -165,6 +167,12 @@ endif
 " https://github.com/c9s/perlomni.vim
 let g:neocomplete#sources#omni#input_patterns.perl = '\h\w*->\h\w*\|\h\w*::'
 
+" For neco-look setting.
+" enable neco-look at all filetype
+if !exists('g:neocomplete#text_mode_filetypes')
+    let g:neocomplete#text_mode_filetypes = {}
+endif
+let g:neocomplete#text_mode_filetypes = { "_" : 1}
 
 " ----------------------------------------------------------------------
 " unite
@@ -356,7 +364,8 @@ let g:solarized_italic=0
 "let g:solarized_contrast="normal"
 "let g:solarized_visibility="normal"
 set background=dark
-colorscheme solarized
+"colorscheme solarized
+colorscheme molokai
 
 
 " ----------------------------------------------------------------------
