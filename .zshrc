@@ -110,10 +110,8 @@ if [ `which vim` ]; then
   alias vi='vim'
   alias view='vim -R'
 fi
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
 
 #
 # less
 #
-export LESS='-i -M -R -z-4 -x2'
+export LESS='-i -M -R -S -z-4 -x2'
