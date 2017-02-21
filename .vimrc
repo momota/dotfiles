@@ -518,6 +518,9 @@ nnoremap <Space>h :<C-u>vert bel h<Space>
 " 垂直分割でdiff [<Space> + vd <diff-file>]
 nnoremap <Space>vd :<C-u>vertical diffsplit<Space>
 
+" t に tabnew をマッピング
+nnoremap t :<C-u>tabnew<CR>
+
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
 
