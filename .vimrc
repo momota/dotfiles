@@ -48,6 +48,7 @@ NeoBundle 'rking/ag.vim'
 NeoBundle 'h1mesuke/vim-alignta'
 NeoBundle 'itchyny/calendar.vim'
 NeoBundle 'ujihisa/neco-look'
+NeoBundle 'vim-scripts/vim-auto-save'
 
 " lint
 NeoBundle 'scrooloose/syntastic'
@@ -421,6 +422,13 @@ augroup filetype
   au! BufRead,BufNewFile *.slim   set filetype=slim
   au! BufRead,BufNewFile *.coffee set filetype=coffee
 augroup END 
+
+" ----------------------------------------------------------------------
+" vim-auto-save
+
+let g:auto_save = 1
+" do not save while in insert mode
+let g:auto_save_in_insert_mode = 0
 
 
 " ======================================================================
