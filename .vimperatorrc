@@ -51,6 +51,12 @@ EOM
 "  一般設定
 " ----------------------------------------------------------------------
 
+" Disable vimperator when visit specific sites.
+autocmd LocationChange .*                             js modes.passAllKeys = false
+autocmd LocationChange docs\\.google\\.com            js modes.passAllKeys = true
+autocmd LocationChange console\\.cloud\\.google\\.com js modes.passAllKeys = true
+autocmd LocationChange www\\.google\\.com/calendar    js modes.passAllKeys = true
+
 " git clone https://github.com/vimpr/vimperator-colors ~/.vimperator/colors 
 colorscheme solarized_dark
 
