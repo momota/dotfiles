@@ -35,6 +35,15 @@ NeoBundle 'Shougo/neosnippet-snippets'
 NeoBundle 'Shougo/neocomplete'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neomru.vim'
+NeoBundle 'Shougo/vimproc.vim', {
+\ 'build' : {
+\     'windows' : 'tools\\update-dll-mingw',
+\     'cygwin' : 'make -f make_cygwin.mak',
+\     'mac' : 'make',
+\     'linux' : 'make',
+\     'unix' : 'gmake',
+\    },
+\ }
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'thinca/vim-fontzoom'
 NeoBundle 'davidoc/taskpaper.vim'
