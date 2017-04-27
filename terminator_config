@@ -17,7 +17,7 @@
 [profiles]
   [[default]]
     background_image = None
-    background_type = transparent
+    # background_type = transparent
   [[solarized-dark]]
     background_color = "#002b36"
     background_image = None
