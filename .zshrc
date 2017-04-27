@@ -56,7 +56,7 @@ source $ZSH/oh-my-zsh.sh
 # ----------------------------------------------------------------------
 # User configuration
 
-export PATH=$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:/home/momota/dev/go/bin:$PATH
+export PATH=/opt/tmux-2.4/bin:$HOME/.rbenv/bin:$HOME/bin:/usr/local/bin:/home/momota/dev/go/bin:$PATH
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
