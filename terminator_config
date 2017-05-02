@@ -3,7 +3,7 @@
   focus = system
   title_transmit_bg_color = "#d30102"
 [keybindings]
-  paste = <control>v
+  #paste = <control>v
 [layouts]
   [[default]]
     [[[child1]]]
