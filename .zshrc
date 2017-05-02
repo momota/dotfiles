@@ -122,3 +122,16 @@ fi
 # less
 #
 export LESS='-i -M -R -S -z-4 -x2'
+
+#
+# open
+#
+case ${OSTYPE} in
+  darwin*)
+    # Mac
+  linux*)
+    # linux
+    open() {
+      xdg-open $@ &
+    }
+esac
