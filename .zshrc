@@ -86,6 +86,13 @@ eval "$(rbenv init -)"
 export GOPATH=/home/momota/dev/go
 
 #
+# python
+#
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+
+#
 # coloring MANual Pages
 #
 # man pages in color
