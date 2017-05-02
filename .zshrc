@@ -129,9 +129,11 @@ export LESS='-i -M -R -S -z-4 -x2'
 case ${OSTYPE} in
   darwin*)
     # Mac
+    ;;
   linux*)
     # linux
     open() {
       xdg-open $@ &
     }
+    ;;
 esac
