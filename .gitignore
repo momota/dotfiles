@@ -24,5 +24,6 @@ samples
 
 .bundle/
 vendor/bundle/
+spring/
 
 public/
