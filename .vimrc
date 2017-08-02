@@ -547,3 +547,9 @@ nnoremap Y y$
 " コマンド履歴数
 set history=1000
 
+" スワップファイルの出力先
+set directory=/tmp
+
+" バックアップファイルの出力先
+set backupdir=/tmp
+
