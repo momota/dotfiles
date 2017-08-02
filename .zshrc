@@ -86,6 +86,13 @@ eval "$(rbenv init -)"
 export GOPATH=/home/momota/dev/go
 
 #
+# python
+#
+export PYENV_ROOT=$HOME/.pyenv
+export PATH=$PYENV_ROOT/bin:$PATH
+eval "$(pyenv init -)"
+
+#
 # coloring MANual Pages
 #
 # man pages in color
@@ -115,3 +122,27 @@ fi
 # less
 #
 export LESS='-i -M -R -S -z-4 -x2'
+
+#
+# open
+#
+case ${OSTYPE} in
+  darwin*)
+    # Mac
+    ;;
+  linux*)
+    # linux
+    open() {
+      xdg-open $@ &
+    }
+    ;;
+esac
+
+# search an english word on alc with w3m
+alc() {
+  if [ $# != 0 ]; then
+    w3m "http://eow.alc.co.jp/$*/UTF-8/?ref=sa"
+  else
+    w3m "http://www.alc.co.jp/"
+  fi
+}
