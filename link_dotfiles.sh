@@ -9,6 +9,7 @@ curl https://raw.githubusercontent.com/Shougo/neobundle.vim/master/bin/install.s
 sh ./install.sh
 
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
+ln -sf ~/dotfiles/.gvimrc ~/.gvimrc
 
 ln -sf ~/dotfiles/.vimperatorrc ~/.vimperatorrc
 ln -sf ~/dotfiles/.tmux.conf ~/.tmux.conf
