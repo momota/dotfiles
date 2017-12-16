@@ -13,3 +13,10 @@ let g:solarized_italic=0
 set background=dark
 "colorscheme solarized
 colorscheme molokai
+
+
+" Window size
+" window width
+set columns=100
+" window height
+set lines=999
