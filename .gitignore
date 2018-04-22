@@ -27,3 +27,6 @@ vendor/bundle/
 spring/
 
 public/
+
+# for Google API client secret
+client_secret_*.json
