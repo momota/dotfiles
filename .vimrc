@@ -1,104 +1,86 @@
 " ======================================================================
-" NeoBundle
+" dein.vim
 " ======================================================================
-if has('vim_starting')
-  if &compatible
-    set nocompatible               " Be iMproved
-  endif
 
-  " Required:
-  set runtimepath+=~/.vim/bundle/neobundle.vim/
+if &compatible
+  set nocompatible               " Be iMproved
 endif
 
 " Required:
-call neobundle#begin(expand('~/.vim/bundle'))
+set runtimepath+=/home/momota/.cache/dein/repos/github.com/Shougo/dein.vim
 
-" Let NeoBundle manage NeoBundle
 " Required:
-NeoBundleFetch 'Shougo/neobundle.vim'
+if dein#load_state('/home/momota/.cache/dein')
+  call dein#begin('/home/momota/.cache/dein')
 
-" You can specify revision/branch/tag.
-NeoBundle 'Shougo/vimshell', { 'rev' : '3787e5' }
+  " Let dein manage dein
+  " Required:
+  call dein#add('/home/momota/.cache/dein/repos/github.com/Shougo/dein.vim')
+
+  " Add or remove your plugins here:
+  call dein#add('Shougo/neocomplcache')
+
+  call dein#add('Shougo/neosnippet.vim')
+  call dein#add('Shougo/neosnippet-snippets')
+  call dein#add('Shougo/neocomplete.vim')
+  call dein#add('Shougo/unite.vim')
+  call dein#add('Shougo/neomru.vim')
+  call dein#add('wincent/command-t')
+  call dein#add('thinca/vim-quickrun')
+  call dein#add('thinca/vim-fontzoom')
+  call dein#add('davidoc/taskpaper.vim')
+  call dein#add('itchyny/lightline.vim')
+  call dein#add('itchyny/vim-cursorword')
+  call dein#add('itchyny/calendar.vim')
+  call dein#add('nathanaelkane/vim-indent-guides')
+  call dein#add('kana/vim-arpeggio')
+  call dein#add('tpope/vim-fugitive')
+  call dein#add('ctrlpvim/ctrlp.vim')
+  call dein#add('rking/ag.vim')
+  call dein#add('h1mesuke/vim-alignta')
+  call dein#add('vim-scripts/vim-auto-save')
+  call dein#add('tpope/vim-surround')
+
+  " lint
+  call dein#add('scrooloose/syntastic')
+
+  " incsearch
+  call dein#add('haya14busa/incsearch.vim')
+  call dein#add('haya14busa/incsearch-fuzzy.vim')
+  call dein#add('haya14busa/incsearch-migemo.vim')
+
+  " syntax highlight
+  call dein#add('plasticboy/vim-markdown')
+  call dein#add('joker1007/vim-markdown-quote-syntax')
+  call dein#add('vim-ruby/vim-ruby')
+  call dein#add('slim-template/vim-slim')
+  call dein#add('kchmck/vim-coffee-script')
+  call dein#add('momota/junos.vim')
+  call dein#add('momota/cisco.vim')
+  call dein#add('Konfekt/FastFold')
+  call dein#add('hashivim/vim-terraform')
+
+  " colorscheme
+  call dein#add('flazz/vim-colorschemes')
+  call dein#add('altercation/vim-colors-solarized')
+  call dein#add('tomasr/molokai')
+
+  " You can specify revision/branch/tag.
+  "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
+
+  " Required:
+  call dein#end()
+  call dein#save_state()
+endif
 
 " Required:
 filetype plugin indent on
+syntax enable
 
-" If there are uninstalled bundles found on startup,
-" this will conveniently prompt you to install them.
-NeoBundleCheck
-
-" ----------------------------------------------------------------------
-" install plugins
-" GitHubリポジトリにあるプラグインを利用する
-NeoBundle 'Shougo/neosnippet.vim'
-NeoBundle 'Shougo/neosnippet-snippets'
-NeoBundle 'Shougo/neocomplete'
-NeoBundle 'Shougo/unite.vim'
-NeoBundle 'Shougo/neomru.vim'
-NeoBundle 'Shougo/vimproc.vim', {
-\ 'build' : {
-\     'windows' : 'tools\\update-dll-mingw',
-\     'cygwin' : 'make -f make_cygwin.mak',
-\     'mac' : 'make',
-\     'linux' : 'make',
-\     'unix' : 'gmake',
-\    },
-\ }
-NeoBundle 'thinca/vim-quickrun'
-NeoBundle 'thinca/vim-fontzoom'
-NeoBundle 'davidoc/taskpaper.vim'
-NeoBundle 'itchyny/lightline.vim'
-NeoBundle 'itchyny/vim-cursorword'
-NeoBundle 'nathanaelkane/vim-indent-guides'
-NeoBundle 'kana/vim-arpeggio'
-NeoBundle 'tpope/vim-fugitive'
-NeoBundle 'ctrlpvim/ctrlp.vim'
-NeoBundle 'rking/ag.vim'
-NeoBundle 'h1mesuke/vim-alignta'
-NeoBundle 'itchyny/calendar.vim'
-NeoBundle 'ujihisa/neco-look'
-NeoBundle 'vim-scripts/vim-auto-save'
-
-" lint
-NeoBundle 'scrooloose/syntastic'
-
-" incsearch
-NeoBundle 'haya14busa/incsearch.vim'
-NeoBundle 'haya14busa/incsearch-fuzzy.vim'
-NeoBundle 'haya14busa/incsearch-migemo.vim'
-
-" syntax highlight
-NeoBundle 'plasticboy/vim-markdown'
-NeoBundle 'vim-ruby/vim-ruby'
-NeoBundle 'slim-template/vim-slim'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'kchmck/vim-coffee-script'
-NeoBundle 'fatih/vim-go'
-NeoBundle 'momota/junos.vim'
-NeoBundle 'momota/cisco.vim'
-NeoBundle 'pearofducks/ansible-vim'
-
-" for editting markdown file
-NeoBundle 'tyru/open-browser.vim'
-NeoBundle 'kannokanno/previm'
-
-" colorscheme
-NeoBundle 'flazz/vim-colorschemes'
-NeoBundle 'altercation/vim-colors-solarized'
-NeoBundle 'tomasr/molokai'
-
-"GitHub以外のGitリポジトリにあるプラグインを利用する
-"NeoBundle 'git://git.wincent.com/command-t.git'
-
-" vim-scripts リポジトリにあるプラグインを利用する
-NeoBundle 'surround.vim'
-
-"Git以外のリポジトリにあるプラグインを利用する
-"NeoBundle 'http://svn.macports.org/repository/macports/contrib/mpvim/'
-"NeoBundle 'https://bitbucket.org/ns9tks/vim-fuzzyfinder'
-
-" Required:
-call neobundle#end()
+" If you want to install not installed plugins on startup.
+if dein#check_install()
+  call dein#install()
+endif
 
 
 " ----------------------------------------------------------------------
@@ -539,15 +521,15 @@ set backupdir=/tmp
 " ----------------------------------------------------------------------
 " colorscheme
 
-call togglebg#map("<F5>")
+"call togglebg#map("<F5>")
 "let g:solarized_termcolors=16
 "let g:solarized_termtrans=0
 "let g:solarized_degrade=0
 "let g:solarized_bold=1
-let g:solarized_underline=1
-let g:solarized_italic=0
+"let g:solarized_underline=1
+"let g:solarized_italic=0
 "let g:solarized_contrast="normal"
 "let g:solarized_visibility="normal"
-set background=dark
-colorscheme solarized
-
+"set background=dark
+"colorscheme solarized
+colorscheme molokai
