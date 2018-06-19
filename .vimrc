@@ -367,14 +367,20 @@ map mg/ <Plug>(incsearch-migemo-stay)
 
 
 " ----------------------------------------------------------------------
-" syntastic: for lint (rubocop)
+" syntastic: for lint (rubocop, pylint, etc...)
 
-let g:syntastic_mode_map = { 'mode': 'active' }
+let g:syntastic_mode_map = { 'mode': 'passive', 'active_filetypes': ['ruby']}
 let g:syntastic_ruby_checkers = ['rubocop']
 let g:syntastic_memo_checkers = ['textlint']
 let g:syntastic_mail_checkers = ['textlint']
 let g:syntastic_markdown_checkers = ['textlint']
 
+let g:syntastic_error_symbol='✗'
+let g:syntastic_warning_symbol='!'
+let g:syntastic_style_error_symbol = '✗'
+let g:syntastic_style_warning_symbol = '!'
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 
 " ----------------------------------------------------------------------
 " open browser
