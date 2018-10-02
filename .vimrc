@@ -65,6 +65,9 @@ if dein#load_state('/home/momota/.cache/dein')
   call dein#add('altercation/vim-colors-solarized')
   call dein#add('tomasr/molokai')
 
+  " icons
+  call dein#add('ryanoasis/vim-devicons')
+
   " You can specify revision/branch/tag.
   "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
 
