@@ -398,6 +398,17 @@ vmap gx <Plug>(openbrowser-smart-search)
 let g:calendar_google_calendar = 1
 let g:calendar_google_task = 1
 
+
+" ----------------------------------------------------------------------
+" vim-markdown
+
+" Enable TOC window auto-fit
+let g:vim_markdown_toc_autofit = 1
+" To disable conceal regardless of conceallevel setting
+let g:vim_markdown_conceal = 0
+" To disable the folding configuration
+let g:vim_markdown_folding_disabled = 1
+
 " ----------------------------------------------------------------------
 " syntax file
 
