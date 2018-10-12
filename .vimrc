@@ -523,6 +523,16 @@ nnoremap <Space>vd :<C-u>vertical diffsplit<Space>
 " t に tabnew をマッピング
 nnoremap t :<C-u>tabnew<CR>
 
+" Shift + Tab にインデント1段下げをマッピング
+" --- for command mode
+nnoremap <S-Tab> <<
+" --- for insert mode
+inoremap <S-Tab> <C-d>
+" Shift + Tab にインデント1段上げをマッピング
+" --- for command mode
+nnoremap <Tab> >>
+
+
 " コマンドライン補完するときに強化されたものを使う(参照 :help wildmenu)
 set wildmenu
 
