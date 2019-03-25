@@ -40,6 +40,7 @@ if dein#load_state('/home/momota/.cache/dein')
   call dein#add('h1mesuke/vim-alignta')
   call dein#add('vim-scripts/vim-auto-save')
   call dein#add('tpope/vim-surround')
+  call dein#add('mechatroner/rainbow_csv')
 
   " lint
   call dein#add('scrooloose/syntastic')
