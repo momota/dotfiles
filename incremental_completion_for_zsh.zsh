@@ -82,7 +82,7 @@ function show-prediction
 			BUFFER="$buffer_org"
 			CURSOR="$cursor_org"
 		fi
-		echo -n "\e[32m"
+		echo -n "\e[1;30m"
 	else
 		zle -M ""
 	fi
