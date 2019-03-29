@@ -60,6 +60,7 @@ if dein#load_state('/home/momota/.cache/dein')
   call dein#add('momota/cisco.vim')
   call dein#add('Konfekt/FastFold')
   call dein#add('hashivim/vim-terraform')
+  call dein#add('leafgarland/typescript-vim')
 
   " colorscheme
   call dein#add('flazz/vim-colorschemes')
