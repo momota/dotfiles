@@ -7,7 +7,7 @@ ln -sf ~/dotfiles/incremental_completion_for_zsh.zsh ~/.oh-my-zsh/custom/increme
 
 # install dein.vim
 curl https://raw.githubusercontent.com/Shougo/dein.vim/master/bin/installer.sh > ~/installer.sh
-sh ./installer.sh ~/.cache/dein
+sh ~/installer.sh ~/.cache/dein
 rm ~/installer.sh
 
 ln -sf ~/dotfiles/.vimrc ~/.vimrc
