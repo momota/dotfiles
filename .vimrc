@@ -70,6 +70,9 @@ if dein#load_state('~/.cache/dein')
   " icons
   call dein#add('ryanoasis/vim-devicons')
 
+  " markdown
+  call dein#add('dhruvasagar/vim-table-mode')
+
   " You can specify revision/branch/tag.
   "call dein#add('Shougo/deol.nvim', { 'rev': 'a1b5108fd' })
 
@@ -425,6 +428,27 @@ augroup END
 let g:auto_save = 1
 " do not save while in insert mode
 let g:auto_save_in_insert_mode = 0
+
+" ----------------------------------------------------------------------
+" vim-table-mode
+
+
+function! s:isAtStartOfLine(mapping)
+  let text_before_cursor = getline('.')[0 : col('.')-1]
+  let mapping_pattern = '\V' . escape(a:mapping, '\')
+  let comment_pattern = '\V' . escape(substitute(&l:commentstring, '%s.*$', '', ''), '\')
+  return (text_before_cursor =~? '^' . ('\v(' . comment_pattern . '\v)?') . '\s*\v' . mapping_pattern . '\v$')
+endfunction
+
+inoreabbrev <expr> <bar><bar>
+          \ <SID>isAtStartOfLine('\|\|') ?
+          \ '<c-o>:TableModeEnable<cr><bar><space><bar><left><left>' : '<bar><bar>'
+inoreabbrev <expr> __
+          \ <SID>isAtStartOfLine('__') ?
+          \ '<c-o>:silent! TableModeDisable<cr>' : '__'
+
+" For Markdown-compatible tables
+let g:table_mode_corner='|'
 
 
 " ======================================================================
