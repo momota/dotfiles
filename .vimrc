@@ -522,7 +522,7 @@ set textwidth=0
 set formatoptions+=mM
 
 " mac: yank のクリップボード連携
-set clipboard=unnamedplus,autoselect
+set clipboard=unnamedplus,autoselect,unnamed
 
 " ----------------------------------------------------------------------
 "   検索の挙動に関する設定
