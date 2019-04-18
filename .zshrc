@@ -57,6 +57,7 @@ plugins=(
   ruby
   python
   emoji
+  zsh-autosuggestions
 )
 
 source $ZSH/oh-my-zsh.sh
