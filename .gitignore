@@ -31,6 +31,8 @@ public/
 
 # for Google API client secret
 client_secret_*.json
+keyfile.json
+.config/gcloud/
 
 # Serverless framework
 .serverless
@@ -38,8 +40,6 @@ client_secret_*.json
 tmp
 .coveralls.yml
 
-# Google
-keyfile.json
 
 # Logs
 *.log
