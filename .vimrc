@@ -462,6 +462,7 @@ syntax on
 
 " 行番号表示
 set number
+set relativenumber
 " ルーラーを表示 (noruler:非表示)
 set ruler
 " タブや改行を表示 (list:表示)
