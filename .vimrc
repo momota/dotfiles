@@ -223,7 +223,10 @@ function! s:unite_my_settings()"{{{
   inoremap <silent> <buffer> <expr> <C-o> unite#do_action('open')
 endfunction"}}}
 
+" ----------------------------------------------------------------------
+" vim-devicons
 
+let g:WebDevIconsUnicodeDecorateFolderNodes = 1
 
 " ----------------------------------------------------------------------
 " lightline.vim
@@ -246,6 +249,8 @@ let g:lightline = {
         \   'mode': 'MyMode'
         \ }
         \ }
+let g:lightline.separator = { 'left': "\ue0b0", 'right': "\ue0b2" }
+let g:lightline.subseparator = { 'left': "\ue0b0", 'right': "\ue0b3" }
 
 function! MyModified()
   return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
