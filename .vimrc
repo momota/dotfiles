@@ -580,6 +580,9 @@ set directory=/tmp
 " バックアップファイルの出力先
 set backupdir=/tmp
 
+" undoファイルの出力先
+set undodir=/tmp
+
 " ----------------------------------------------------------------------
 " colorscheme
 
