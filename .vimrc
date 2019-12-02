@@ -41,6 +41,7 @@ if dein#load_state('~/.cache/dein')
   call dein#add('vim-scripts/vim-auto-save')
   call dein#add('tpope/vim-surround')
   call dein#add('mechatroner/rainbow_csv')
+  call dein#add('luochen1990/rainbow')
 
   " lint
   call dein#add('scrooloose/syntastic')
