@@ -24,7 +24,7 @@ let s:lazy_toml = s:toml_dir . '/dein_lazy.toml'
 
 " TOML を読み込み、キャッシュしておく
 call dein#load_toml(s:toml,      {'lazy': 0})
-call dein#load_toml(s:lazy_toml, {'lazy': 0})
+call dein#load_toml(s:lazy_toml, {'lazy': 1})
 
 " Required:
 call dein#end()

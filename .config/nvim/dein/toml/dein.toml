@@ -1,2 +1,196 @@
 [[plugins]]
 repo = 'Shougo/dein.vim'
+
+##
+# status bar
+##
+
+[[plugins]]
+repo = 'vim-airline/vim-airline'
+
+[[plugins]]
+repo = 'vim-airline/vim-airline-themes'
+depends = 'vim-airline'
+hook_add = '''
+    let g:airline_theme = 'molokai'
+    let g:airline_powerline_fonts = 1
+    let g:airline#extensions#tabline#enabled = 1
+    let g:airline#extensions#tabline#buffer_idx_mode = 1
+    let g:airline#extensions#tabline#fnamemod = ':t'
+'''
+
+#####################################################################
+# Filer
+#####################################################################
+
+[[plugins]]
+repo = 'scrooloose/nerdtree'
+hook_add = '''
+  let NERDTreeShowHidden = 1
+
+  " Closes after opening a file
+  let NERDTreeQuitOnOpen = 1
+
+  nnoremap <silent><Space>ff :NERDTreeFind<CR>:vertical res 30<CR>
+  nnoremap <silent><Space>ft :NERDTreeToggle<CR>:vertical res 30<CR>
+'''
+
+[[plugins]]
+repo = 'ryanoasis/vim-devicons'
+hook_add='''
+  let g:webdevicons_enable_nerdtree = 1
+  let g:webdevicons_enable_denite = 1
+'''
+
+
+[[plugins]]
+repo = 'ctrlpvim/ctrlp.vim'
+hook_add = '''
+  " let g:ctrlp_cmd = 'CtrlPMRU'
+  let g:ctrlp_types = ["mru", 'fil', 'buf']
+  let g:ctrlp_mruf_max = 300
+  if executable('ag')
+    let g:ctrlp_use_caching = 0
+    let g:ctrlp_user_command = 'ag %s -i --nocolor --nogroup -g ""'
+  endif
+  nnoremap <silent><Space>fm :CtrlP .<CR>
+'''
+
+
+#####################################################################
+# 検索 置換
+#####################################################################
+
+# 検索にagを使う
+[[plugins]]
+repo = 'rking/ag.vim'
+hook_add = '''
+    let g:ag_prg="ag --vimgrep --hidden"
+'''
+
+# 置換 preview
+[[plugins]]
+repo = 'markonm/traces.vim'
+
+# Underlines the word under the cursor 
+[[plugins]]
+repo = 'itchyny/vim-cursorword'
+
+
+#####################################################################
+# appearance
+#####################################################################
+
+##
+# syntax
+##
+
+[[plugins]]
+repo = 'cespare/vim-toml'
+
+
+##
+# colorscheme
+##
+
+[[plugins]]
+repo = 'cocopon/iceberg.vim'
+hook_add='''
+  colorscheme iceberg
+'''
+
+# 色情報が入ったファイルを開いた場合は表示を色付けする
+[[plugins]]
+repo = 'vim-scripts/AnsiEsc.vim'
+
+# 括弧の対応を分かりやすくするため色を変える
+[[plugins]]
+repo = 'luochen1990/rainbow'
+hook_add = '''
+    let g:rainbow_active = 1
+'''
+
+# インデントガイド
+[[plugins]]
+repo = 'nathanaelkane/vim-indent-guides'
+
+# インデントのレベルによって色を変える
+[[plugins]]
+repo = 'thiagoalessio/rainbow_levels.vim'
+
+# font size controller
+[[plugins]]
+repo = 'thinca/vim-fontzoom'
+
+
+
+#####################################################################
+# completion
+#####################################################################
+
+##
+# neosnippet
+##
+
+[[plugins]]
+repo = 'Shougo/neosnippet.vim'
+depends = ['neosnippet-snippets', 'context_filetype.vim']
+on_i = 1
+hook_source = '''
+  " <TAB>: completion.
+  " inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
+  inoremap <expr><S-TAB>  pumvisible() ? "\<C-p>" : "\<S-TAB>"
+  
+  " Plugin key-mappings.
+  imap <C-s>     <Plug>(neosnippet_expand_or_jump)
+  smap <C-s>     <Plug>(neosnippet_expand_or_jump)
+  
+  " SuperTab like snippets behavior.
+  " imap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : pumvisible() ? "\<C-n>" : "\<TAB>"
+  imap <expr><TAB> pumvisible() ? "\<C-n>" : neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  smap <expr><TAB> neosnippet#jumpable() ? "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
+  
+  " For snippet_complete marker.
+  if has('conceal')
+    set conceallevel=2 concealcursor=i
+  endif
+  "
+  " スニペットファイルの保存ディレクトリのパスを登録
+  let g:neosnippet#snippets_directory='~/.config/nvim/neosnippets/snippets'
+  
+  " 補完メニューの高さ指定
+  set pumheight=10
+'''
+
+[[plugins]]
+repo = 'Shougo/neosnippet-snippets'
+
+#####################################################################
+# development
+#####################################################################
+
+# asynchronous execution library
+[[plugins]]
+repo = 'Shougo/vimproc.vim'
+
+# run command quickly
+[[plugins]]
+repo = 'thinca/vim-quickrun'
+
+# A Git wrapper so awesome, it should be illegal
+[[plugins]]
+repo = 'tpope/vim-fugitive'
+
+# quoting/parenthesizing made simple
+[[plugins]]
+repo = 'tpope/vim-surround'
+
+# Automatically save changes to disk
+[[plugins]]
+repo = 'vim-scripts/vim-auto-save'
+hook_add = '''
+    let g:auto_save = 1
+    " do not save while in insert mode
+    let g:auto_save_in_insert_mode = 0
+'''
+
