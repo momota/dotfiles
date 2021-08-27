@@ -23,8 +23,9 @@ alias l   'ls -la'
 
 
 # nvim
-alias vi  'nvim'
-alias vim 'nvim'
+alias vi   'nvim'
+alias vim  'nvim'
+alias view 'nvim -R'
 
 
 # tree
@@ -67,7 +68,7 @@ end
 # cd のあとに ls
 function cd
   builtin cd $argv
-  ls
+  ls -a
 end
 
 # man の色付け
