@@ -68,7 +68,7 @@ end
 # cd のあとに ls
 function cd
   builtin cd $argv
-  ls -a
+  ls -la
 end
 
 # man の色付け
