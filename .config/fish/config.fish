@@ -83,3 +83,7 @@ function man
   LESS_TERMCAP_us=(printf "\e[1;32m") \
   man $argv
 end
+
+# rbenv
+# Load rbenv automatically by appending
+status --is-interactive; and source (rbenv init -|psub)
