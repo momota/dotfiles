@@ -5,6 +5,11 @@ end
 ##
 # 環境変数
 ##
+
+# PATH
+fish_add_path /opt/homebrew/bin/
+
+# デフォルトエディタ
 set -x EDITOR nvim
 
 # neovim設定ファイルの path
