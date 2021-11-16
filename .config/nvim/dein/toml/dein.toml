@@ -12,7 +12,7 @@ repo = 'vim-airline/vim-airline'
 repo = 'vim-airline/vim-airline-themes'
 depends = 'vim-airline'
 hook_add = '''
-    let g:airline_theme = 'molokai'
+    let g:airline_theme = 'iceberg'
     let g:airline_powerline_fonts = 1
     let g:airline#extensions#tabline#enabled = 1
     let g:airline#extensions#tabline#buffer_idx_mode = 1
@@ -76,6 +76,24 @@ repo = 'markonm/traces.vim'
 [[plugins]]
 repo = 'itchyny/vim-cursorword'
 
+[[plugins]]
+repo = 'easymotion/vim-easymotion'
+hook_add = '''
+  " <Leader>f{char} to move to {char}
+  map  <Leader><Leader>f <Plug>(easymotion-bd-f)
+  nmap <Leader><Leader>f <Plug>(easymotion-overwin-f)
+  
+  " s{char}{char} to move to {char}{char}
+  nmap s <Plug>(easymotion-overwin-f2)
+  
+  " Move to line
+  map <Leader><Leader>L <Plug>(easymotion-bd-jk)
+  nmap <Leader><Leader>L <Plug>(easymotion-overwin-line)
+  
+  " Move to word
+  map  <Leader><Leader>w <Plug>(easymotion-bd-w)
+  nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
+'''
 
 #####################################################################
 # appearance
@@ -127,6 +145,17 @@ repo = 'thinca/vim-fontzoom'
 #####################################################################
 # completion
 #####################################################################
+
+# auto close parentheses
+[[plugins]]
+repo = 'cohama/lexima.vim'
+
+# auto close (x)html tags
+[[plugins]]
+repo = 'alvan/vim-closetag'
+hook_add = '''
+    let g:closetag_filenames = '*.html,*.xhtml,*.phtml,*.erb,*.php,*.vue'
+'''
 
 # coc.nvim: Nodejs extension host for vim & neovim, load extensions like VSCode and host language servers.
 [[plugins]]
