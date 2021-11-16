@@ -225,5 +225,7 @@ set backupdir=~/.nvim/backup
 " undo ファイルの出力先
 set undodir=~/.nvim/tmp
 
+" <Leader> キーの割当て
+let mapleader = "\<Space>"
 
 filetype plugin indent on
