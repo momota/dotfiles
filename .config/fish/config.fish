@@ -9,7 +9,7 @@ end
 # PATH
 fish_add_path /opt/homebrew/bin/
 
-# デフォルトエディタ
+# default editor
 set -x EDITOR nvim
 
 # neovim設定ファイルの path
@@ -46,11 +46,15 @@ alias gaa 'git add --all'
 alias gc  'git commit -v'
 alias gc! 'git commit -v --amend'
 
-alias gd 'git diff'
+alias gd  'git diff'
 
 # ghq
 alias ghb 'hub browse (ghq list | peco | cut -d "/" -f 2,3)'
 alias ghv 'code (ghq list --full-path | peco)'
+
+# kubernetes
+alias k   'kubectl'
+
 
 ##
 # 関数定義
