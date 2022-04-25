@@ -95,6 +95,11 @@ hook_add = '''
   nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
 '''
 
+# cmigemo
+[[plugins]]
+repo = 'haya14busa/vim-migemo'
+
+
 #####################################################################
 # appearance
 #####################################################################
